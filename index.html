@@ -4,149 +4,231 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Elegant Engenharia | Reforma e Construção em Curitiba</title>
-<meta name="description" content="Reforma residencial e construção do zero em Curitiba e Região Metropolitana. Qualidade, prazo e preço justo. Solicite seu orçamento agora!">
 
 <style>
-body {
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: Arial, sans-serif;
-    background-color: #0b3d59;
+}
+
+body {
+    background: #f4f4f4;
+}
+
+/* HEADER */
+header {
+    background: #0b3d59;
+    padding: 20px 60px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
     color: white;
+    font-size: 22px;
+    font-weight: bold;
 }
 
-.container {
-    max-width: 1100px;
-    margin: auto;
-    padding: 20px;
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
 }
 
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-header {
+    background: #d4af37;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/* HERO */
 .hero {
+    height: 100vh;
+    background: url("images/banner.jpg") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    padding: 60px 20px;
+    color: white;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+}
+
+.hero-content {
+    position: relative;
+    max-width: 800px;
 }
 
 .hero h1 {
-    font-size: 36px;
+    font-size: 48px;
     margin-bottom: 20px;
 }
 
 .hero p {
-    font-size: 18px;
+    font-size: 20px;
     margin-bottom: 30px;
 }
 
 .btn {
-    background-color: #d4af37;
-    color: #000;
+    background: #d4af37;
+    color: black;
     padding: 15px 30px;
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
-    display: inline-block;
 }
 
+/* SOBRE */
 .section {
-    padding: 60px 20px;
-    background-color: #ffffff;
-    color: #333;
+    padding: 100px 60px;
+    background: white;
+}
+
+.section-content {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.section img {
+    width: 500px;
+    border-radius: 10px;
+}
+
+.section-text {
+    max-width: 600px;
 }
 
 .section h2 {
-    text-align: center;
-    margin-bottom: 40px;
+    font-size: 36px;
+    margin-bottom: 20px;
 }
 
-.benefits {
+/* SERVIÇOS */
+.services {
+    background: #f0f0f0;
+    padding: 80px 60px;
+}
+
+.cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    gap: 30px;
 }
 
 .card {
-    background: #f4f4f4;
-    padding: 20px;
-    border-radius: 8px;
-}
-
-.footer {
-    text-align: center;
+    background: white;
     padding: 30px;
-    background-color: #082c40;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
 }
 
-.whatsapp-float {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #25d366;
+/* FOOTER */
+footer {
+    background: #082c40;
     color: white;
-    padding: 15px 20px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: bold;
+    padding: 60px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+footer h3 {
+    margin-bottom: 15px;
 }
 </style>
 </head>
 
 <body>
 
-<div class="hero container">
-    <h1>Reforma e Construção com Qualidade em Curitiba</h1>
-    <p>Elegant Engenharia – Construção do zero e reformas residenciais com prazo, segurança e acabamento de alto padrão.</p>
-    <a class="btn" href="https://wa.me/5541984636636" target="_blank">
-        Solicitar Orçamento no WhatsApp
-    </a>
-</div>
+<header>
+    <nav>
+        <div class="logo">Elegant Engenharia</div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Serviços</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+        <a class="btn-header" href="https://wa.me/5541984636636" target="_blank">Orçamento</a>
+    </nav>
+</header>
 
-<div class="section">
-    <div class="container">
-        <h2>Por que escolher a Elegant Engenharia?</h2>
-        <div class="benefits">
-            <div class="card">
-                <h3>✔ Cumprimos prazos</h3>
-                <p>Compromisso com cronograma e organização da obra.</p>
-            </div>
-            <div class="card">
-                <h3>✔ Qualidade garantida</h3>
-                <p>Acabamento impecável e mão de obra especializada.</p>
-            </div>
-            <div class="card">
-                <h3>✔ Orçamento transparente</h3>
-                <p>Sem surpresas. Você sabe exatamente o que está pagando.</p>
-            </div>
-            <div class="card">
-                <h3>✔ Atendimento rápido</h3>
-                <p>Resposta imediata pelo WhatsApp.</p>
-            </div>
+<section class="hero">
+    <div class="hero-content">
+        <h1>Construção e Reforma com Alto Padrão em Curitiba</h1>
+        <p>Projetos executados com qualidade, prazo e transparência.</p>
+        <a class="btn" href="https://wa.me/5541984636636" target="_blank">Fale Conosco</a>
+    </div>
+</section>
+
+<section class="section">
+    <div class="section-content">
+        <img src="images/sobre.jpg" alt="Obra realizada">
+        <div class="section-text">
+            <h2>Sobre a Elegant Engenharia</h2>
+            <p>Atuamos em Curitiba e Região Metropolitana com foco em reformas residenciais e construção do zero, entregando obras com alto padrão de acabamento e cumprimento rigoroso de prazos.</p>
         </div>
     </div>
-</div>
+</section>
 
-<div class="section" style="background-color:#f0f0f0;">
-    <div class="container">
-        <h2>Nossos Serviços</h2>
-        <ul>
-            <li>Reforma residencial completa</li>
-            <li>Construção do zero</li>
-            <li>Ampliações e áreas gourmet</li>
-            
-        </ul>
-        <br>
-        <a class="btn" href="https://wa.me/5541984636636" target="_blank">
-            Falar com Especialista
-        </a>
+<section class="services">
+    <h2 style="text-align:center; margin-bottom:40px;">Nossos Serviços</h2>
+    <div class="cards">
+        <div class="card">Reforma Completa</div>
+        <div class="card">Construção do Zero</div>
+        <div class="card">Áreas Gourmet</div>
+        <div class="card">Pisos e Acabamentos</div>
     </div>
-</div>
+</section>
 
-<div class="footer">
-    <p><strong>Elegant Engenharia</strong></p>
-    <p>Curitiba – PR e Região Metropolitana</p>
-    <p>WhatsApp: (41) 98463-6636</p>
-</div>
-
-<a class="whatsapp-float" href="https://wa.me/5541984636636" target="_blank">
-    WhatsApp
-</a>
+<footer>
+    <div class="footer-grid">
+        <div>
+            <h3>Elegant Engenharia</h3>
+            <p>Curitiba – PR</p>
+            <p>WhatsApp: (41) 98463-6636</p>
+        </div>
+        <div>
+            <h3>Serviços</h3>
+            <p>Reformas</p>
+            <p>Construção</p>
+        </div>
+        <div>
+            <h3>Contato</h3>
+            <p>Atendimento rápido via WhatsApp</p>
+        </div>
+    </div>
+</footer>
 
 </body>
 </html>
