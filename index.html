@@ -29,7 +29,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(10,20,40,0.85);
+    background: rgba(10,20,40,0.9);
     z-index: 10;
 }
 
@@ -66,3 +66,276 @@ nav a:hover {
     justify-content: center;
     text-align: center;
     color: white;
+    padding: 0 20px;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    background: #d4af37;
+    color: black;
+    padding: 15px 35px;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #b9962f;
+}
+
+/* ===== SERVIÇOS ===== */
+
+.servicos {
+    padding: 100px 60px;
+    background: #f4f4f4;
+    text-align: center;
+}
+
+.servicos h2 {
+    font-size: 36px;
+    margin-bottom: 60px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    width: 300px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin: 20px 0 10px;
+}
+
+.card p {
+    padding: 0 20px 30px;
+}
+
+/* ===== CONTATO ===== */
+
+.contato {
+    background: #0a1428;
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.mapa {
+    width: 100%;
+    height: 350px;
+    margin-top: 40px;
+}
+
+footer {
+    background: #081020;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* ===== BOTÃO WHATSAPP PROFISSIONAL ===== */
+
+.whatsapp-container {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 100;
+}
+
+.whatsapp-text {
+    background: white;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.whatsapp-float {
+    width: 60px;
+    height: 60px;
+    background-color: #25d366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    animation: pulse 1.8s infinite;
+    transition: 0.3s;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+.whatsapp-float svg {
+    width: 30px;
+    height: 30px;
+    fill: white;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(37,211,102, 0.6); }
+    70% { box-shadow: 0 0 0 15px rgba(37,211,102, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37,211,102, 0); }
+}
+
+/* ===== RESPONSIVO ===== */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 15px 20px;
+        flex-direction: column;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    nav a {
+        margin: 0 10px;
+        font-size: 14px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    .whatsapp-text {
+        display: none;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <img src="images/logo.jpg" alt="Elegant Engenharia">
+    </div>
+
+    <nav>
+        <a href="#">Início</a>
+        <a href="#servicos">Serviços</a>
+        <a href="https://wa.me/5541984636636?text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20um%20orçamento." target="_blank" class="btn-top">
+            Orçamento
+        </a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Excelência em Construção e Reforma</h1>
+        <p>Projetos residenciais executados com qualidade, precisão e profissionalismo.</p>
+        <a href="https://wa.me/5541984636636?text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20um%20orçamento%20para%20minha%20obra." 
+           class="btn" 
+           target="_blank">
+           Solicitar Orçamento
+        </a>
+    </div>
+</section>
+
+<section class="servicos" id="servicos">
+    <h2>Nossos Serviços</h2>
+    <div class="cards">
+        <div class="card">
+            <img src="images/hero.jpg">
+            <h3>Construção Residencial</h3>
+            <p>Execução completa do projeto até a entrega final.</p>
+        </div>
+        <div class="card">
+            <img src="images/hero.jpg">
+            <h3>Reformas</h3>
+            <p>Reformas modernas com acabamento de alto padrão.</p>
+        </div>
+        <div class="card">
+            <img src="images/hero.jpg">
+            <h3>Projetos Estruturais</h3>
+            <p>Planejamento técnico e execução segura.</p>
+        </div>
+    </div>
+</section>
+
+<section class="contato">
+    <h2>Entre em Contato</h2>
+    <p>WhatsApp: (41) 98463-6636</p>
+    <p>Email: contato@elegantengenharia.com</p>
+
+    <iframe class="mapa"
+        src="https://www.google.com/maps?q=Curitiba%20PR&output=embed">
+    </iframe>
+</section>
+
+<footer>
+    © 2026 Elegant Engenharia - Curitiba PR
+</footer>
+
+<!-- BOTÃO WHATSAPP PROFISSIONAL -->
+
+<div class="whatsapp-container">
+    <div class="whatsapp-text">Fale Conosco</div>
+    <a href="https://wa.me/5541984636636?text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20um%20orçamento." 
+       target="_blank" 
+       class="whatsapp-float">
+        <svg viewBox="0 0 24 24">
+            <path d="M20.52 3.48A11.94 11.94 0 0012.01 0C5.37 0 .01 5.36.01 12c0 2.12.55 4.18 1.6 6.01L0 24l6.17-1.61A11.95 11.95 0 0012.01 24C18.65 24 24 18.64 24 12c0-3.19-1.24-6.19-3.48-8.52zM12.01 21.82c-1.92 0-3.8-.52-5.44-1.5l-.39-.23-3.66.96.98-3.57-.25-.41A9.77 9.77 0 012.23 12c0-5.4 4.39-9.79 9.78-9.79 2.61 0 5.07 1.02 6.92 2.87A9.73 9.73 0 0121.79 12c0 5.4-4.39 9.82-9.78 9.82zm5.35-7.38c-.29-.14-1.72-.85-1.99-.95-.27-.1-.47-.14-.67.14-.2.29-.77.95-.94 1.15-.17.2-.35.22-.64.07-.29-.14-1.23-.45-2.35-1.43-.87-.77-1.46-1.72-1.63-2.01-.17-.29-.02-.45.13-.59.13-.13.29-.35.43-.52.14-.17.19-.29.29-.49.1-.2.05-.37-.02-.52-.07-.14-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.29-1.04 1.01-1.04 2.46s1.06 2.86 1.21 3.06c.14.2 2.08 3.18 5.04 4.46.7.3 1.25.48 1.67.62.7.22 1.33.19 1.83.12.56-.08 1.72-.7 1.96-1.38.24-.68.24-1.26.17-1.38-.07-.12-.27-.2-.56-.34z"/>
+        </svg>
+    </a>
+</div>
+
+</body>
+</html>
+
+
